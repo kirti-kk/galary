@@ -1,0 +1,356 @@
+<section class="howItWorks">
+  <svg version="1.1" id="bg-circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="438px" height="438px" viewBox="0 0 438 438" enable-background="new 0 0 438 438" xml:space="preserve">
+    <path id="circle" fill="none" stroke="#FCE5ED" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" d="M418,219
+    c0,109.9-89.1,199-199,199S20,328.9,20,219S109.1,20,219,20S418,109.1,418,219L418,219z"></path>
+  </svg>
+
+  <svg version="1.1" id="bg-triangle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="578px" height="411px" viewBox="0 0 578 411" enable-background="new 0 0 578 411" xml:space="preserve">
+    <polygon id="triangle" fill="none" stroke="#D1F9F4" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" points="
+    426.8,389.2 554.4,21.8 23.6,62 "></polygon>
+  </svg>
+
+  <svg version="1.1" id="bg-lines" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="575px" height="479px" viewBox="0 0 575 479" enable-background="new 0 0 575 479" xml:space="preserve">
+    <path id="lines" fill="none" stroke="#FEF5DD" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" d="M20,266.6
+    L376.3,20 M107.8,362.5l356.3-246.6 M198.2,458.3l356.3-246.6"></path>
+  </svg>
+
+  <div class="howItWorks__content">
+   {% if section.settings.heading != blank %} <h2 class="sectionTitle sectionTitle--hasSub">{{ section.settings.heading }}</h2>{% endif %}
+  {% if section.settings.detail != blank %}  <p class="section-subtitle section-subtitle--center">{{ section.settings.detail }}</p>{% endif %}
+    <div class="howItWorks__container">
+      <div class="howItWorks__video">
+        {%- if section.settings.video_link != blank -%}
+ <video loop="" class="demo-video" autoplay="autoplay" width="100%" muted="muted" playsinline="">
+    <source src="{{ section.settings.video_link }}" type="video/mp4">
+  </video>
+{% endif %}
+  {% if section.settings.btn_url != blank %} <a href="{{ section.settings.btn_url }}" class="btn btn--white btn--video">{{ section.settings.btn_text }}</a>{% endif %}
+      </div>
+    </div>
+
+    <div class="iconFeatures">
+      <div class="iconFeatures__item">
+        <div class="iconFeatures__image">
+        {% if section.settings.icon != blank %} {{ section.settings.icon }}{% endif %}
+        </div>
+     {% if section.settings.heading_icon != blank %}    <h4>{{ section.settings.heading_icon }}</h4>{% endif %}
+      {% if section.settings.detail_icon != blank %}   <p>{{ section.settings.detail_icon }}</p>{% endif %}
+      </div>
+      <div class="iconFeatures__item">
+        <div class="iconFeatures__image">
+           {% if section.settings.icon2 != blank %} {{ section.settings.icon2 }}{% endif %}
+        </div>
+  {% if section.settings.heading_icon2 != blank %}<h4>{{ section.settings.heading_icon2 }}</h4>{% endif %}
+        {% if section.settings.detail_icon2 != blank %} <p>{{ section.settings.detail_icon2 }}</p>{% endif %}
+      </div>
+      <div class="iconFeatures__item">
+        <div class="iconFeatures__image">
+           {% if section.settings.icon3 != blank %} {{ section.settings.icon3 }}{% endif %}
+        </div>
+      {% if section.settings.heading_icon3 != blank %}<h4>{{ section.settings.heading_icon3 }}</h4>{% endif %}
+      {% if section.settings.detail_icon3 != blank %}<p>{{ section.settings.detail_icon3 }}</p>{% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .howItWorks {
+    position: relative;
+    overflow: hidden;
+}
+    .howItWorks {
+    padding: 118px 0 0;
+    margin-bottom: 96px;
+}
+  .howItWorks #bg-circle {
+    top: 5%;
+    left: 5%;
+}
+  .howItWorks #bg-triangle {
+    top: 10%;
+    right: -5%;
+}
+  .howItWorks #bg-lines {
+    top: 50%;
+    left: 5%;
+}
+  .howItWorks #bg-circle, .howItWorks #bg-triangle, .howItWorks #bg-lines {
+    position: absolute;
+    z-index: -1;
+}
+  .sectionTitle{
+    font-family: "tiempos-headline-bold", Times, Georgia, serif;
+    color: #2e469e;
+        font-size: 48px;
+    line-height: 64px;
+        letter-spacing: 0;
+    text-align: center;
+        font-weight: bold;
+
+  }
+  .sectionTitle.sectionTitle--hasSub{
+        margin-bottom: 16px;
+  }
+  .section-subtitle {
+    font-family: "basis-grotesque-medium", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+    color: #000;
+}
+  .btn--white:hover {
+    background-color: #2e469e;
+    color: #ffffff;
+}
+  .section-subtitle--center {
+    margin: 0 auto 48px;
+    text-align: center;
+    width: 58%;
+}
+  .howItWorks__container {
+    align-content: flex-start;
+    align-items: stretch;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    position: relative;
+    margin-bottom: 95px;
+    z-index: 1;
+}
+  .howItWorks__container:before, .howItWorks__container:after {
+    content: ' ';
+    display: table;
+}
+  .howItWorks__video {
+    margin: auto;
+}
+  .howItWorks__container:after {
+    clear: both;
+}
+  .howItWorks .demo-video {
+    background: #faf9fa;
+    border-radius: 6px;
+    border: 16px solid #faf9fa;
+    box-shadow: 0 4px 19px 10px rgb(0 0 0 / 8%);
+    display: block;
+    margin: auto;
+    width: 90%;
+    transform: all 200ms ease-in;
+}
+  .howItWorks .btn--video {
+    box-shadow: 0 8px 16px 2px rgb(0 0 0 / 8%);
+    display: block;
+    margin: 24px auto;
+    width: 300px;
+}
+.btn--video {
+      background-image: none;
+    border-radius: 36px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: "basis-grotesque-bold", Arial, Helvetica, sans-serif !important;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 4.25px;
+    margin-bottom: 0;
+    padding: 22px 40px;
+    position: relative;
+    text-align: center;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+      font-weight: bold;
+
+  }
+  .btn--white {
+    background-color: #ffffff;
+    color: #2e469e;
+}
+  .iconFeatures {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+  .iconFeatures__item {
+    box-sizing: border-box;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+}
+  .iconFeatures__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+  .iconFeatures__image svg {
+    display: unset;
+    max-width: unset;
+    max-height: 88px;
+    min-width: 148px;
+}
+  .iconFeatures__item h4 {
+    color: #2e469e;
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 0;
+    font-family: "basis-grotesque-bold", Arial, Helvetica, sans-serif;
+        margin-bottom: 0;
+    font-weight: bold;
+
+  }
+  .iconFeatures__item p {
+    font-family: "basis-grotesque-medium", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: normal;
+    letter-spacing: 0.3px;
+        color: #000;
+    margin-top: 0;
+
+  }
+ svg:not(:root) {
+    overflow: hidden;
+}
+  .iconFeatures__item:hover {
+    transform: translateY(-4px);
+}
+  @media screen and (min-width: 760px){
+    .howItWorks {
+    padding: 118px 0 0;
+    margin-bottom: 96px;
+}
+    howItWorks__container {
+    width: 84%;
+    margin-left: auto;
+    margin-right: auto;
+}
+    .iconFeatures {
+    align-content: center;
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+          width: 84%;
+    margin-left: auto;
+    margin-right: auto;
+}
+    .iconFeatures__item {
+    flex: 1 0 32.33333333%;
+    max-width: 33.33333333%;
+    width: 33.33333333%;
+}
+    .iconFeatures__image {
+    margin-bottom: 50px;
+}
+  }
+
+</style>
+{% schema %}
+  {
+    "name": "How It Work",
+    "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+      {
+          "type": "textarea",
+          "id": "detail",
+          "label": "Description"
+        },
+       {
+          "type": "url",
+          "id": "video_link",
+          "label": "Video Link"
+        },
+      {
+      "type": "header",
+      "content": "Button"
+       },
+      {
+          "type": "text",
+          "id": "btn_text",
+          "label": "Botton Text"
+        },
+       {
+          "type": "url",
+          "id": "btn_url",
+          "label": "Botton Link"
+        },
+       {
+          "type": "header",
+          "content": "Icons with Text 1"
+         },
+         {
+           "type": "html",
+           "id": "icon",
+           "label": "Icon svg"
+         },
+         {
+          "type": "text",
+          "id": "heading_icon",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "detail_icon",
+          "label": "Description"
+        },
+      {
+          "type": "header",
+          "content": "Icons with Text 2"
+         },
+         {
+           "type": "html",
+           "id": "icon2",
+           "label": "Icon svg"
+         },
+         {
+          "type": "text",
+          "id": "heading_icon2",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "detail_icon2",
+          "label": "Description"
+        },
+      {
+          "type": "header",
+          "content": "Icons with Text 3"
+         },
+         {
+           "type": "html",
+           "id": "icon3",
+           "label": "Icon svg"
+         },
+         {
+          "type": "text",
+          "id": "heading_icon3",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "detail_icon3",
+          "label": "Description"
+        }
+        
+    ], 
+    "presets": [
+    {
+      "name": "How It Work"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
