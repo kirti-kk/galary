@@ -1,0 +1,239 @@
+<section class="testimonial-video" id="video-testimonial">
+    <div class="testimonial-video__inner">
+      <div class="container container--xlarge container--center wrapper flex flex--center space space--large">
+        <h2 class="title title--large center">
+          {{ section.settings.heading }}
+        </h2>
+        <p class="testimonial-video__copy center">
+        {{ section.settings.detail }}
+        </p>
+      </div>
+<div class="testimonial-video__bg">
+  <div class="flex flex--center wrapper" data-player="">
+    <div class="testimonial-video__video-wrapper" data-play-trigger="" data-video-id="HZwD5SX7a1Q">
+      <button class="testimonial-video__play-btn" data-play-button="">
+        <svg width="31px" height="36px" viewBox="0 0 31 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Our-Customers" transform="translate(-851.000000, -1587.000000)">
+                <g id="Video-1" transform="translate(-24.000000, 1007.000000)">
+                  <g id="play-button" transform="translate(841.000000, 549.000000)">
+                    <polygon id="Triangle" fill="#F681AB" transform="translate(52.500000, 52.500000) rotate(90.000000) translate(-52.500000, -52.500000) " points="52.5 40 67 65 38 65"></polygon>
+                    <polygon id="Triangle" stroke="#2E469E" stroke-width="3" stroke-linejoin="round" transform="translate(48.500000, 47.500000) rotate(90.000000) translate(-48.500000, -47.500000) " points="48.5 35 63 60 34 60"></polygon>
+                  </g>
+                </g>
+              </g>
+            </g>
+        </svg>
+      </button>
+      <div class="testimonial-video__overlay" data-video-overlay=""></div>
+ {%- if section.settings.video_url.type == 'youtube' -%}
+          <iframe id="video-player" class="testimonial-video__iframe" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="Father Time Bread Delights Customers with Custom Packaging | Packlane" width="640" height="360" src="https://www.youtube.com/embed/{{ section.settings.video_url.id }}?enablejsapi=1" class="js-youtube" allow="autoplay; encrypted-media" allowfullscreen title="{{ section.settings.description | escape }}" width="560" height="330" ></iframe>
+        {%- else -%}
+          <iframe id="video-player" class="testimonial-video__iframe" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="Father Time Bread Delights Customers with Custom Packaging | Packlane" width="640" height="360"  src="https://player.vimeo.com/video/{{ section.settings.video_url.id }}" class="js-vimeo" allow="autoplay; encrypted-media" allowfullscreen title="{{ section.settings.description | escape }}"></iframe>
+        {%- endif -%}    </div>
+  </div>
+</div>
+
+    </div>
+  </section>
+  <style>
+    .testimonial-video {
+    background-color: {{section.settings.bg_color}};
+    font-family: "basis-grotesque-medium", Arial, Helvetica, sans-serif;
+    position: relative;
+}
+    .testimonial-video__inner {
+    padding: 104px 0;
+}
+    .testimonial-video .wrapper {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+    .testimonial-video .flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+    .testimonial-video .flex--center {
+    justify-content: center;
+}
+    .testimonial-video .container--center {
+    margin-left: auto;
+    margin-right: auto;
+}
+    .testimonial-video .container--xlarge {
+    max-width: 1200px;
+}
+    .testimonial-video .container {
+    display: block;
+    padding: 0;
+    width: 100%;
+}
+    .testimonial-video .title--large {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 51px;
+    font-family: "tiempos-headline-bold", Times, Georgia, serif;
+      
+}
+    .testimonial-video .title {
+    color: #2e469e;
+    position: relative;
+    margin-bottom: 20px;
+}
+    .u-text-center {
+    text-align: center;
+}
+    .testimonial-video__copy {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    max-width: 840px;
+          margin: 0 auto;
+
+}
+    .testimonial-video__bg {
+    margin-top: 60px;
+}
+ .testimonial-video__video-wrapper {
+   cursor: pointer;
+    height: 0;
+    max-width: 725px;
+    padding-bottom: 56.25%;
+    position: relative;
+    width: 100%;
+}
+    .testimonial-video__play-btn {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fad143;
+    z-index: 2;
+    border: 0;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    cursor: pointer;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+}
+    .testimonial-video__play-btn::before {
+    content: '';
+    border: 3px solid #2e469e;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+    top: -5px;
+    left: -5px;
+}
+    .testimonial-video__play-btn svg {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+    .testimonial-video__overlay {
+    box-shadow: 12px 12px 0px 0px #2e469e;
+    background-image: url(https://cdn.shopify.com/s/files/1/0625/9533/4201/files/ezgif.com-gif-maker_3.png?v=1666265936);
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: 0.4s ease;
+    width: 100%;
+    z-index: 1;
+}
+    .testimonial-video__iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+    .testimonial-video__video-wrapper:hover > .testimonial-video__overlay {
+    background-image: linear-gradient(rgba(0, 226, 199, 0.55), rgba(0, 226, 199, 0.55)), url(https://assets.packlane.com/15e4lkEAeSWJI1YQsD2guXcieDDSQHAYsUFonk4DyZM/fn:father-time-bread-video/czM6Ly9wYWNrbGFuZS1hc3NldHMvcHJvZHVjdGlvbi9hcHAvaW1hZ2VzL291ci1jdXN0b21lcnMvZmF0aGVyLXRpbWUtYnJlYWQtdmlkZW8uanBn.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: all ease-in 200ms;
+}
+    .testimonial-video__play-btn--active {
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
+    opacity: 0;
+}
+    .testimonial-video__overlay--active {
+    opacity: 0;
+    z-index: -1;
+}
+    div:empty{
+          display: unset;
+    }
+    @media screen and (min-width: 768px){
+   .testimonial-video__video-wrapper {
+    height: 410px;
+    padding: 0;
+}   
+    }
+
+  </style>
+{% schema %}
+  {
+    "name": "Testimonial Video",
+    "settings": [
+      {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background Color"
+        },
+      {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+      {
+          "type": "textarea",
+          "id": "detail",
+          "label": "Description"
+        },
+      {
+      "type": "video_url",
+      "id": "video_url",
+      "accept": [
+        "youtube",
+        "vimeo"
+      ],
+      "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+      "label": "t:sections.video.settings.video_url.label",
+      "placeholder": "t:sections.video.settings.video_url.placeholder",
+      "info": "t:sections.video.settings.video_url.info"
+    }
+    ], 
+    "presets": [
+    {
+      "name": "Testimonial Video"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+  $( document ).ready(function() {
+    $(".testimonial-video__play-btn").click(function(){
+   $(this).addClass("testimonial-video__play-btn--active");
+      $('.testimonial-video__overlay').addClass("testimonial-video__overlay--active");
+});
+});
+
+{% endjavascript %}
