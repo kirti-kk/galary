@@ -1,0 +1,467 @@
+<section class="featuredDesigns">
+  {% if section.settings.heading_main!= blank %} 
+    <h2 class="sectionTitle sectionTitle--hasSub">{{ section.settings.heading_main }}</h2>
+    {% endif %}
+     {% if section.settings.detail_main!= blank %} 
+  <p class="section-subtitle section-subtitle--center">{{ section.settings.detail_main }}</p>
+       {% endif %}
+  <div class="featuredDesigns__mobile">
+    <div class="featuredDesigns__slides">
+<picture><img alt="Get inspired" loading="lazy" src="https://assets.packlane.com/ww7hKmlBH0xeqNwtmEa2DGPF1APADczEaoWWtd_1xbc/w:400/fn:folding-carton-boxes-7d1d60486958747f81e1cc8bf79e4aaf/czM6Ly9wYWNrbGFuZS1hc3NldHMvcHJvZHVjdGlvbi9hcHAvaW1hZ2VzL2ZvbGRpbmctY2FydG9uLWJveGVzLTdkMWQ2MDQ4Njk1ODc0N2Y4MWUxY2M4YmY3OWU0YWFmLmpwZw.jpg"></picture>
+    </div>
+    <!-- <div class="featuredDesigns__arrow featuredDesigns__arrow--next"></div>
+    <div class="featuredDesigns__arrow featuredDesigns__arrow--prev"></div> -->
+  </div>
+  <div class="designsGrid designsGrid--six">
+    <div class="designsGrid__col designsGrid__col--left">
+     {% if section.settings.image != blank %}
+      <div class="designsGrid__item designsGrid__item--top designsGrid__item--left designsGrid__item--small">
+        <a href="{{ section.settings.btn_url }}">
+          <div class="designsGrid__square">
+<picture><img data-responsive-background-image="true" loading="lazy" src="{{ section.settings.image | img_url:'master' }}" style="background-image: url('{{ section.settings.image | img_url:'master' }}');"></picture>
+            <div class="designsGrid__overlay">
+              <div class="designsGrid__data">
+                <h2>{{ section.settings.heading }}</h2>
+                <a class="smallCTA--white" href="{{ section.settings.btn_url }}">{{ section.settings.btn_text }}</a>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endif %}
+      {% if section.settings.image2 != blank %}
+      <div class="designsGrid__item designsGrid__item--top designsGrid__item--right designsGrid__item--small">
+        <a href="{{ section.settings.btn_url2 }}">
+          <div class="designsGrid__square">
+<picture><img data-responsive-background-image="true" loading="lazy" src="{{ section.settings.image2 | img_url:'master' }}" style="background-image: url('{{ section.settings.image2 | img_url:'master' }}');"></picture>
+            <div class="designsGrid__overlay">
+              <div class="designsGrid__data">
+                <h2>{{ section.settings.heading2 }}</h2>
+                <a class="smallCTA--white" href="{{ section.settings.btn_url2 }}">{{ section.settings.btn_text2 }}</a>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+   {% endif %}
+         {% if section.settings.image_lrg != blank %}
+      <div class="designsGrid__item designsGrid__item--bottom designsGrid__item--large">
+        <a href="{{ section.settings.btn_urllrg }}">
+          <div class="designsGrid__square">
+<picture><img data-loading="lazy" data-responsive-background-image="true" src="{{ section.settings.image_lrg | img_url:'master' }}" style="background-image: url('{{ section.settings.image_lrg | img_url:'master' }}');"></picture>
+            <div class="designsGrid__overlay">
+              <div class="designsGrid__data">
+                <h2>{{ section.settings.heading_lrg }}</h2>
+                <a class="smallCTA--white" href="{{ section.settings.btn_urllrg }}">{{ section.settings.btn_textlrg }}</a>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endif %}
+    </div>
+   
+    <div class="designsGrid__col designsGrid__col--right">
+       {% if section.settings.image_lrg2 != blank %}
+      <div class="designsGrid__item designsGrid__item--top designsGrid__item--large active">
+        <a href="{{ section.settings.btn_urllrg2 }}">
+          <div class="designsGrid__square">
+<picture><img loading="lazy" src="{{ section.settings.image_lrg2 | img_url:'master' }}"></picture>
+            <div class="designsGrid__overlay">
+              <div class="designsGrid__data">
+                <h2>{{ section.settings.heading_lrg2 }}</h2>
+                <a class="smallCTA--white" href="{{ section.settings.btn_urllrg2 }}">{{ section.settings.btn_textlrg2 }}</a>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+         {% endif %}
+          {% if section.settings.image3!= blank %}
+      <div class="designsGrid__item designsGrid__item--bottom designsGrid__item--left designsGrid__item--small">
+        <a href="{{ section.settings.btn_url3 }}">
+          <div class="designsGrid__square">
+<picture><img data-responsive-background-image="true" loading="lazy" src="{{ section.settings.image3 | img_url:'master' }}" style="background-image: url('{{ section.settings.image3 | img_url:'master' }}');"></picture>
+            <div class="designsGrid__overlay">
+              <div class="designsGrid__data">
+                <h2>{{ section.settings.heading3 }}</h2>
+                <a class="smallCTA--white" href="{{ section.settings.btn_url3 }}">{{ section.settings.btn_text3 }}</a>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endif %}
+     {% if section.settings.image4!= blank %}
+        <div class="designsGrid__item designsGrid__item--bottom designsGrid__item--right designsGrid__item--small">
+        <a href="{{ section.settings.btn_url4 }}">
+          <div class="designsGrid__square">
+<picture><img data-responsive-background-image="true" loading="lazy" src="{{ section.settings.image4 | img_url:'master' }}" style="background-image: url('{{ section.settings.image4 | img_url:'master' }}');"></picture>
+            <div class="designsGrid__overlay">
+              <div class="designsGrid__data">
+                <h2>{{ section.settings.heading4 }}</h2>
+                <a class="smallCTA--white" href="{{ section.settings.btn_url4 }}">{{ section.settings.btn_text4 }}</a>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+ {% endif %}
+  </div>
+</section>
+<style>
+  .sectionTitle.sectionTitle--hasSub{
+        margin-bottom: 16px;
+    color: #2e469e;
+
+  }
+  .section-subtitle--center {
+    margin: 0 auto 48px;
+    text-align: center;
+    width: 58%;
+    font-family: "basis-grotesque-medium", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+}
+  .featuredDesigns__mobile {
+    position: relative;
+}
+  .featuredDesigns__mobile img {
+    width: 100%;
+    display: block;
+}
+  .designsGrid--six .designsGrid__col {
+    box-sizing: border-box;
+}
+  .designsGrid--six .designsGrid__col:before, .designsGrid--six .designsGrid__col:after {
+    content: ' ';
+    display: table;
+}
+  .designsGrid__item--small {
+    width: 50%;
+}
+  .designsGrid__item--top {
+    padding-bottom: 20px;
+}
+  .designsGrid__item--left {
+    padding-right: 20px;
+}
+  .designsGrid__item {
+    float: left;
+    box-sizing: border-box;
+}
+  .designsGrid__item a {
+    text-decoration: none;
+}
+  .designsGrid__square {
+    height: 0;
+    width: 100%;
+    padding-bottom: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+}
+  .designsGrid__square picture {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+  [data-responsive-background-image] {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+  .designsGrid__square img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+  .designsGrid__square:hover .designsGrid__overlay {
+    opacity: 1;
+}
+  .designsGrid__item--right {
+    padding-left: 20px;
+}
+  .designsGrid__overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 70, 158, 0.85);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+  .designsGrid__overlay h2 {
+    margin-bottom: 20px;
+    font-family: "basis-grotesque-bold", Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: 40px;
+    color: #fff
+}
+  .designsGrid__overlay h2:before {
+    content: '';
+    display: block;
+    width: 34px;
+    height: 4px;
+    background-color: #1bdfc7;
+    margin: 0 auto 28px;
+}
+  .smallCTA--white {
+    color: #ffffff;
+    font-family: "basis-grotesque-bold", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+  .smallCTA--white:after {
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    transform: translateX(3px) translateY(-1px) rotate(45deg);
+    transition: border 0.3s ease-in-out;
+}
+  .designsGrid__item--large {
+    width: 100%;
+}
+  .designsGrid__item--bottom {
+    padding-top: 20px;
+}
+  .designsGrid:after {
+    clear: both;
+}
+  .designsGrid:before, .designsGrid:after {
+    content: ' ';
+    display: table;
+}
+  .designsGrid--six .designsGrid__col:before, .designsGrid--six .designsGrid__col:after {
+    content: ' ';
+    display: table;
+}
+  .smallCTA--white:hover {
+    color: #1bdfc7;
+}
+  @media screen and (min-width: 1100px){
+   .designsGrid--six .designsGrid__col--left {
+    padding-right: 20px;
+}
+    .designsGrid--six .designsGrid__col {
+    width: 50%;
+    float: left;
+}
+    .designsGrid--six .designsGrid__col--right {
+    padding-left: 20px;
+}
+  }
+
+  @media screen and (min-width: 760px){
+    .designsGrid{
+          width: 84%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .designsGrid:before, .designsGrid:after {
+    content: ' ';
+    display: table;
+}
+   .featuredDesigns {
+    padding-top: 56px;
+    margin-bottom: 64px;
+} 
+    .featuredDesigns__mobile {
+    display: none;
+}
+  }
+
+</style>
+{% schema %}
+  {
+    "name": "Gallery Design",
+    "settings": [
+       {
+          "type": "text",
+          "id": "heading_main",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "detail_main",
+          "label": "Description"
+        },
+      
+      {
+          "type": "header",
+          "content": "Small Image 1"
+         },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+       {
+          "type": "text",
+          "id": "btn_text",
+          "label": "Botton Text"
+        },
+       {
+          "type": "url",
+          "id": "btn_url",
+          "label": "Botton Link"
+        },
+       {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+       {
+          "type": "header",
+          "content": "Small Image 2"
+         },
+        {
+          "type": "text",
+          "id": "heading2",
+          "label": "Heading"
+        },
+       {
+          "type": "text",
+          "id": "btn_text2",
+          "label": "Botton Text"
+        },
+       {
+          "type": "url",
+          "id": "btn_url2",
+          "label": "Botton Link"
+        },
+       {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Image"
+        },
+      {
+          "type": "header",
+          "content": "Small Image 3"
+         },
+        {
+          "type": "text",
+          "id": "heading3",
+          "label": "Heading"
+        },
+       {
+          "type": "text",
+          "id": "btn_text3",
+          "label": "Botton Text"
+        },
+       {
+          "type": "url",
+          "id": "btn_url3",
+          "label": "Botton Link"
+        },
+       {
+          "type": "image_picker",
+          "id": "image3",
+          "label": "Image"
+        },
+       {
+          "type": "header",
+          "content": "Small Image 4"
+         },
+        {
+          "type": "text",
+          "id": "heading4",
+          "label": "Heading"
+        },
+       {
+          "type": "text",
+          "id": "btn_text4",
+          "label": "Botton Text"
+        },
+       {
+          "type": "url",
+          "id": "btn_url4",
+          "label": "Botton Link"
+        },
+       {
+          "type": "image_picker",
+          "id": "image4",
+          "label": "Image"
+        },
+      {
+          "type": "header",
+          "content": "Large Image 1"
+         },
+        {
+          "type": "text",
+          "id": "heading_lrg",
+          "label": "Heading"
+        },
+       {
+          "type": "text",
+          "id": "btn_textlrg",
+          "label": "Botton Text"
+        },
+       {
+          "type": "url",
+          "id": "btn_urllrg",
+          "label": "Botton Link"
+        },
+       {
+          "type": "image_picker",
+          "id": "image_lrg",
+          "label": "Image"
+        },
+      {
+          "type": "header",
+          "content": "Large Image 2"
+         },
+        {
+          "type": "text",
+          "id": "heading_lrg2",
+          "label": "Heading"
+        },
+       {
+          "type": "text",
+          "id": "btn_textlrg2",
+          "label": "Botton Text"
+        },
+       {
+          "type": "url",
+          "id": "btn_urllrg2",
+          "label": "Botton Link"
+        },
+       {
+          "type": "image_picker",
+          "id": "image_lrg2",
+          "label": "Image"
+        }
+    ], 
+    "presets": [
+    {
+      "name": "Gallery Design"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
